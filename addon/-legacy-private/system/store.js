@@ -1962,6 +1962,7 @@ Store = Service.extend({
     } else {
       let normalizedModelName = normalizeModelName(modelName);
       this._internalModelsFor(normalizedModelName).clear();
+	  this.recordArrayManager._liveRecordArrays[normalizedModelName]=undefined;
     }
   },
 
